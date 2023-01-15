@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>classwork19</title>
+    <style>
+        .right {
+            
+            display: flex;
+            justify-content: right;
+            margin: 40px;
+        }
+        
+        form {
+            width: 30vw;
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0px 0px 20px gray;
+        }
+        .form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .submit {
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+        label {
+            font-weight: 500;
+        }
+        .form-control::placeholder {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="right">
+        <button type="button" class="btn btn-primary login">log in</button>
+    </div>
+    <div class="form" >
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail" class="form-label">User Name</label>
+          <input type="text" class="form-control" placeholder="username" id="exampleInputEmail">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" placeholder="password" id="exampleInputPassword1">
+        </div>
+        <div class="submit">
+        <button type="submit" class="btn btn-primary submit">Submit</button>
+        </div>
+    </form>
+    </div>
+
+    <script>
+        let body = document.querySelector('body');
+        let login = document.querySelector('.login');
+        let button = document.querySelector('.submit');
+        let div = document.querySelector('.form');
+        login.addEventListener('click', addMenu);
+        button.addEventListener('click', addGreen);
+        div.innerText = ''; 
+        function addMenu() {
+            event.stopPropagation();
+           
+        }
+        function addGreen() {
+            event.stopPropagation();
+            if(exampleInputEmail.value == 'katie' && exampleInputPassword1.value == '352') {
+            body.style.backgroundColor = 'green';
+            }
+        }
+       
+    </script>
+
+
+</body>
+</html>
